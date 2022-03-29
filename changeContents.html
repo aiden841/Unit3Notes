@@ -37,7 +37,17 @@
     const full = document.querySelector('p');
     const clearButton = document.querySelector('[name="clear"]');
 
-    function nameCreator() {
+    lastName.addEventListener('change', nameCreator);
+
+    firstName.addEventListener('change', nameCreator);
+    clearButton.addEventListener('click', function(e) {
+        firstName.value = "";
+        lastName.value = "";
+        full.textContext = "";
+    })
+
+
+    function nameCreator(){
         let first = firstName.value;
         let last = lastName.value;
         let fullName = `Hello ${first} ${last}!`;
@@ -48,18 +58,6 @@
             `Hello ${fullName}!`;
         }
     }
-
-    lastName.addEventListener('change',function(e){
-        let first = firstName.value;
-        let last = lastName.value;
-        let fullName = `Hello ${first} ${last}!`;
-        full.textContent = fullName;
-    });
-    clearButton.addEventListener('click', function(e) {
-        firstName.value = "";
-        lastName.value = "";
-        full.textContext = "";
-    })
 </script>
 ;</body>
 </html>
