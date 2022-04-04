@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>color picker</title>
+    <style>
+        .red{
+            background-color:red;
+        }
+        .green{
+            background-color:green;
+        }
+        .blue{
+            background-color:blue;
+        }
+        .navy{
+            background-color:navy;
+        }
+        .brown{
+            background-color:brown;
+        }
+        .orange{
+            background-color:orange;
+        }
+        .pink{
+            color:pink;
+        }
+        .teal{
+            color:teal;
+        }
+        .purple{
+            color:purple;
+        }
+        .silver{
+            color:silver;
+        }
+        .golden{
+            color:goldenrod;
+        }
+        .lightgreen{
+            color:lightgreen;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="content">
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+        do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem dolor sed viverra ipsum nunc aliquet. Tincidunt augue interdum
+        velit euismod in pellentesque massa. Id consectetur purus ut faucibus
+        pulvinar elementum integer enim neque. Accumsan in nisl nisi scelerisque
+        eu ultrices vitae. Semper viverra nam libero justo laoreet sit amet.
+        Tellus integer feugiat scelerisque varius morbi enim nunc. Quis commodo
+        odio aenean sed adipiscing diam donec adipiscing tristique. Ipsum faucibus
+        vitae aliquet nec ullamcorper sit amet. Amet commodo nulla facilisi nullam.
+        Sociis natoque penatibus et magnis dis parturient. Amet mattis vulputate enim
+        nulla aliquet. Augue lacus viverra vitae congue eu consequat ac felis. Enim neque
+        volutpat ac tincidunt. Neque gravida in fermentum et sollicitudin ac orci. Aliquam
+        etiam erat velit scelerisque in dictum non consectetur a.</p>
+    <div class="row">
+        <h3>Background</h3>
+        <button id="1">RED</button>
+        <button id="2">GREEN</button>
+        <button id="3">BLUE</button>
+        <button id="a">NAVY</button>
+        <button id="b">BROWN</button>
+        <button id="c">ORANGE</button>
+    </div>
+    <div class="row">
+        <h3>Text</h3>
+        <button id="4">PINK</button>
+        <button id="5">TEAL</button>
+        <button id="6">PURPLE</button>
+        <button id="d">SILVER</button>
+        <button id="e">GOLDENROD</button>
+        <button id="f">LIGHTGREEN</button>
+    </div>
+    <button id="clear">CLEAR</button>
+</div>
+</div>
+<script>
+    const content = document.querySelector('.content');
+    const red = document.getElementById('1');
+    const green = document.getElementById('2');
+    const blue = document.getElementById('3');
+    const navy = document.getElementById('a');
+    const brown = document.getElementById('b');
+    const orange = document.getElementById('c');
+
+    const pink = document.getElementById('4');
+    const teal = document.getElementById('5');
+    const purple = document.getElementById('6');
+    const silver = document.getElementById('d');
+    const goldenrod = document.getElementById('e');
+    const lightgreen = document.getElementById('f');
+
+    const clearButton = document.getElementById('clear');
+
+    red.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('red');
+    });
+
+    green.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('green');
+    });
+
+    blue.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('blue');
+    });
+
+    pink.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('pink');
+    });
+
+    teal.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('teal');
+    });
+
+    purple.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('purple');
+
+    });
+
+    function removeBGColor(){
+        content.classList.remove('red');
+        content.classList.remove('green');
+        content.classList.remove('blue');
+    }
+
+    function removeTextColor() {
+        content.classList.remove('pink');
+        content.classList.remove('teal');
+        content.classList.remove('purple');
+    }
+
+    clear.addEventListener('click', function(e){
+        removeTextColor();
+        removeBGColor();
+    });
+
+    function removeBGColor(){}
+</script>
+</body>
+</html>
