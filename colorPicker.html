@@ -111,6 +111,18 @@
         removeBGColor();
         content.classList.add('blue');
     });
+    navy.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('navy');
+    });
+    brown.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('brown');
+    });
+   orange.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('orange');
+    });
 
     pink.addEventListener('click', function(e){
         removeTextColor();
@@ -127,17 +139,38 @@
         content.classList.add('purple');
 
     });
+    silver.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('silver');
+
+    });
+    goldenrod.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('goldenrod');
+
+    });
+    lightgreen.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('lightgreen');
+
+    });
 
     function removeBGColor(){
         content.classList.remove('red');
         content.classList.remove('green');
         content.classList.remove('blue');
+        content.classList.remove('navy');
+        content.classList.remove('brown');
+        content.classList.remove('orange');
     }
 
     function removeTextColor() {
         content.classList.remove('pink');
         content.classList.remove('teal');
         content.classList.remove('purple');
+        content.classList.remove('silver');
+        content.classList.remove('goldenrod');
+        content.classList.remove('lightgreen');
     }
 
     clear.addEventListener('click', function(e){
