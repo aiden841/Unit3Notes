@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Avatar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <h3>AVATAR CHOICE</h3>
+            <button id="1"> AVATAR 1</button>
+            <button id="2"> AVATAR 2</button>
+            <button id="3"> AVATAR 3</button>
+            <button id="4"> AVATAR 4</button>
+            <button id="5"> AVATAR 5</button>
+            <button id="6"> AVATAR 6</button>
+        </div>
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png">
+    </div>
+</div>
+<script>
+    const picture = document.querySelector('img');
+    const a = document.getElementById('1');
+    const b = document.getElementById('2');
+    const c = document.getElementById('3');
+    const d = document.getElementById('4');
+    const e = document.getElementById('5');
+    const f = document.getElementById('6');
+
+    const clearButton =document.getElementById('clear');
+
+    a.addEventListener('click', function(e){
+
+        picture.src="https://www.shareicon.net/data/256x256/2016/05/24/770117_people_512x512.png"
+    });
+
+    b.addEventListener('click', function(e){
+        picture.src="https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/avat-01-512.png"
+    });
+    c.addEventListener('click', function(e){
+        picture.src="https://cdn4.vectorstock.com/i/1000x1000/06/18/male-avatar-profile-picture-vector-10210618.jpg"
+    });
+    d.addEventListener('click', function(e){
+        picture.src="https://static.vecteezy.com/system/resources/previews/002/275/847/original/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg"
+    });
+    e.addEventListener('click', function(e){
+        picture.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_g_7YVzERozXI_mfnbSPkggiXqlljwtCQXw&usqp=CAU"
+    });
+    f.addEventListener('click', function(e){
+        picture.src="https://img.freepik.com/free-vector/woman-avatar-profile-round-icon_24640-14042.jpg"
+    });
+</script>
+</body>
+</html>

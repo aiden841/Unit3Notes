@@ -58,7 +58,7 @@ section header{
 
 
 .container{
-    max-width: 1300px;
+    max-width: 1700px;
     margin: 0 auto;
 }
 
@@ -67,10 +67,14 @@ section header{
     background: white;
     padding: 20px;
     border-radius: 12px;
-    width: 500px;
+    width: 750px;
 }
 .center{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+img{
+    height:300px;
+    width:300px;
 }
