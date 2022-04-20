@@ -17,19 +17,19 @@
     content.innerHTML = '<h1 class="gone">I Love Zelda</h1><h4>say Clout everyday</h4>';
 
     //add new element in addition to existing elements
-    const zelda= 'createElement ('h1');
+    const zelda= document.createElement('h1');
     zelda.innerHTML = 'I Love Zelda';
     content.appendChild(zelda);
 
     //put this at the top in addition to existing elements
-    const food= 'createElement ('h1');
+    const food= document.createElement ('h1');
     food.innerHTML = 'I Love Pizza';
-    content.insertAdjacentElement('afterend'food);
+    content.insertAdjacentElement('afterend', food);
 
 //    to remove an element
-    cont unwantedElement = document.querySelector('h4')
+    const unwantedElement = document.querySelector('h4')
 
-    cont unwantedElement2 = document.querySelector('.gone')
+    const unwantedElement2 = document.querySelector('.gone')
     unwantedElement2.remove();
 </script>
 </body>
