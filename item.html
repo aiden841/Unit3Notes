@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Change Contents of an Elements Notes</C></title>
+    <style>
+        .hidden{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h1>Change Contents Notes</h1>
+        <div class="row">
+            <div>
+                <label for="first">First Name</label>
+                <input type="text" id="first" name="first_name" placeholder="Jane">
+            </div>
+            <div>
+                <label for="last">Last Name</label>
+                <input type="text" id="last" name="last_name" placeholder="Doe">
+            </div>
+        </div>
+    </div>
+    <button name="clear">Clear</button>
+    <p class="hidden"></p>
+</div>
+</div>
+</div>
+</div>
+<script>
+    const firstName = document.getElementById('first');
+    const lastName = document.getElementById('last');
+    const full = document.querySelector('p');
+    const clearButton = document.querySelector('[name="clear"]');
+
+    lastName.addEventListener('change', nameCreator);
+
+    firstName.addEventListener('change', nameCreator);
+    clearButton.addEventListener('click', function(e) {
+        firstName.value = "";
+        lastName.value = "";
+        full.textContext = "";
+    })
+
+
+    function nameCreator(){
+        let first = firstName.value;
+        let last = lastName.value;
+        let fullName = `Hello ${first} ${last}!`;
+        if (fullName.length > 1) {
+            full.classList.removw("hidden")
+        } else {
+            full.textContent = fullName;
+            `Hello ${fullName}!`;
+        }
+    }
+
+    //add new element in addition to existing elements
+    const zelda= document.createElement('h1');
+    zelda.innerHTML = 'Ms. Bolin';
+    content.appendChild(zelda);
+
+    //put this at the top in addition to existing elements
+    const food= document.createElement ('h1');
+    food.innerHTML = 'Ms. Zelda';
+    content.insertAdjacentElement('afterend', food);
+
+    //    to remove an element
+    const unwantedElement = document.querySelector('h4')
+
+    const unwantedElement2 = document.querySelector('.gone')
+</script>
+;</body>
+</html>
