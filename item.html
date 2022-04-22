@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>List</title>
+    <title>List!</title>
     <style>
         .hidden{
             display:none;
@@ -14,7 +14,6 @@
 <div class="container">
     <div class="content">
         <h1>List</h1>
-        <h1></h1>
         <div class="row">
             <div>
                 <label for="first">item</label>
@@ -23,27 +22,27 @@
         </div>
     </div>
     <button name="hi">Add Item</button>
-    <p class="hidden"></p>
-</div>
-</div>
-</div>
+    <ul></ul>
 </div>
 <script>
     //
-    //
+    const addButton=document.querySelector("button");
     const myList = document.querySelector('ul');
+    const text=document.getElementById("first");
     function addItem(){
         //
         //
         let newElement = document.createElement('li');
-        //add new element in addition to existing elements
+        newElement.innerHTML=text.value;
+        //add new element in addition to existing elements;
         newElement.addEventListener('click', function(e){
-            //
+
+            newElement.remove();
         });
         myList.appendChild(newElement)
         //
     }
-    addButton.addEventListner('click', addItem);
+    addButton.addEventListener('click', addItem);
 </script>
 ;</body>
 </html>
