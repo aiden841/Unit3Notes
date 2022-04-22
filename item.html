@@ -32,52 +32,37 @@
 </div>
 </div>
 <script>
-    const firstName = document.getElementById('first');
-    const lastName = document.getElementById('last');
-    const full = document.querySelector('p');
-    const clearButton = document.querySelector('[name="clear"]');
-
-    lastName.addEventListener('change', nameCreator);
-
-    firstName.addEventListener('change', nameCreator);
-    clearButton.addEventListener('click', function(e) {
-        firstName.value = "";
-        lastName.value = "";
-        full.textContext = "";
-    })
-
-
-    function nameCreator(){
-        let first = firstName.value;
-        let last = lastName.value;
-        let fullName = `Hello ${first} ${last}!`;
-        if (fullName.length > 1) {
-            full.classList.removw("hidden")
-        } else {
-            full.textContent = fullName;
-            `Hello ${fullName}!`;
-        }
+    //
+    //
+    const myList = document.querySelector('ul');
+    function addItem(){
+        //
+        //
+        let newElement = document.createElement('li');
+        //add new element in addition to existing elements
+        newElement.addEventListner('click', function(e){
+            //
+        });
+        myList.appendChild(newElement)
+        //
     }
-
-    const content = document.querySelector('.content');
-    //Replace contents of an html
-    content.innerHTML = '<h1 class="gone">Ms. Bolin</h1>
-
-    //add new element in addition to existing elements
-    const zelda= document.createElement('h1');
-    zelda.innerHTML = 'I Love Zelda';
-    content.appendChild(zelda);
-
-    //put this at the top in addition to existing elements
-    const food= document.createElement ('h1');
-    food.innerHTML = 'Ms. Bolin';
-    content.insertAdjacentElement('afterend', food);
-
-    //    to remove an element
-    const unwantedElement = document.querySelector('h4')
-
-    const unwantedElement2 = document.querySelector('.gone')
-    unwantedElement2.remove();
+    addButton.addEventListner('click', addItem);
+</script><script>
+    //
+    //
+    const myList = document.querySelector('ul');
+    function addItem(){
+        //
+        //
+        let newElement = document.createElement('li');
+        //add new element in addition to existing elements
+        newElement.addEventListner('click', function(e){
+            //
+        });
+        myList.appendChild(newElement)
+        //
+    }
+    addButton.addEventListner('click', addItem);
 </script>
 ;</body>
 </html>
