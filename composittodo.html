@@ -8,6 +8,54 @@
 <body>
 <div class="container">
     <div class="content">
-        <div
+        <div class="row">
+            <input type="text">
+            <button id="submit">Enter</button>
+
+            <table>
+            <thead>
+            <tr>
+                <th>
+                    Description
+                </th>
+                <th>
+
+                </th>
+            </tr>
+            </thead>
+            <tbody id="incomplete">
+
+            </tbody>
+        </table>
+            <p>---------------------</p>
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+
+                    </th>
+                </tr>
+                </thead>
+                <tbody id="complete">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const item = document.querySelector('input');
+        const submitButton = document.getElementById;
+        const incomplete =  document.getElementById('.content');
+        const complete = document.getElementById('.content');
+
+        submitButton.addEventListener('click', function (){
+            let toDoItem = item.value;
+            addItemToIncompleteTable(toDoItem);
+            item.value ="";
+        })
 </body>
 </html>
