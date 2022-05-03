@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h1>Airbnb Reservation</h1>
+        <div class="row">
+            <div>
+                <label for="full">Full Name:</label>
+                <input id="full" name="full_name" type="text">
+            </div>
+            <div>
+                <label for="time">Time In/Out:</label>
+                <input id="time" name="time" type="text">
+            </div>
+        </div>
+        <button id="add">Add Reservation</button>
+        <button id="clear">Clear</button>
+        <div id = "all">
+        </div>
+    </div>
+</div>
+<script>
+
+    const fullName = document.getElementById('full');
+    const time = document.getElementById('time');
+    const addButton = document.getElementById('add');
+    const clearButton = document.getElementById('clear');
+    const all = document.getElementById('all');
+
+    addButton.addEventListener('click', function(e){
+        const newReservation = document.createElement("p")
+        newReservation.innerHTML = `Your reservation at ${time.value} has been set ${full.value}`
+        all.appendChild(newReservation);
+    })
+    clearButton.addEventListener('click', function(e){
+        fullName.value = " ";
+        time.value = " ";
+        all.innerHTML = " ";
+    })
+</script>
+</body>
+</html>
