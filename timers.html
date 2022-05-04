@@ -8,5 +8,47 @@
 <body>
 <div class="container">
     <div class="content">
+        <button id="trigger">Click Me!</button>
+    </div>
+</div>
+<button id="interval">Repeat</button>
+<button id="cancel">Cancel Repeat</button>
+<script>
+    const myButton = document.getElementById("trigger");
+
+    const cancelButton= document.getElementById("cancel");
+
+    myButton.addEventListener('click', function(){
+        //This will happen in hte 1000ms, or 1 seccond
+        setTimeout(function(){
+            console.log("I was clicked 1 second ago.")
+        }, 1000);
+
+        //Not in a time out, so does not wait
+        console.log("Happens right away");
+
+    });
+
+   repeatButton.addEventListener('click', function(){
+        setInterval(function(){
+            console.log("I happen every second.")
+        }, 1000);
+       });
+
+    repeatButton.addEventListener('click', function(){
+        if(!interval){
+            interval = setInterval(function(){
+                console.log("I happen every second. ")
+            }, 1000);
+        }
+
+    });
+
+    cancelButton.addEventListener('click', function(){
+        if(!interval){
+            clearInterval(interval);
+            interval = null;
+        }
+</script>
 </body>
 </html>
