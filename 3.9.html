@@ -15,12 +15,12 @@
                 <input id="full" name="full_name" type="text">
             </div>
             <div>
-                <label for="full">Home Address:</label>
-                <input id="full" name="home_address" type="text">
+                <label for="home">Home Address:</label>
+                <input id="home" name="home_address" type="text">
             </div>
             <div>
-                <label for="full">Zip Code</label>
-                <input id="full" name="full_name" type="text">
+                <label for="code">Zip Code:</label>
+                <input id="code" name="full_name" type="text">
             </div>
             <div>
                 <label for="time">Time In/Out:</label>
@@ -37,20 +37,22 @@
 
     const fullName = document.getElementById('full');
     const time = document.getElementById('time');
+    const home = document.getElementById('home');
+    const zip = document.getElementById('zip');
     const addButton = document.getElementById('add');
     const clearButton = document.getElementById('clear');
     const all = document.getElementById('all');
 
     addButton.addEventListener('click', function(e){
-        const newReservation = document.createElement("p")
-        newReservation.innerHTML = `Your reservation at ${time.value} has been set ${full.value}`
+        const newReservation = document.createElement("p");
+        newReservation.innerHTML = `Your reservation at ${time.value} has been set ${full.value}`;
         all.appendChild(newReservation);
-    })
+    });
     clearButton.addEventListener('click', function(e){
         fullName.value = " ";
         time.value = " ";
         all.innerHTML = " ";
-    })
+    });
 </script>
 </body>
 </html>
