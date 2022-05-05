@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <title>Click Card Game!</title>
     <link href="style.css" rel="stylesheet">
+    <style>
+        .cardList{
+            display:flex;
+            flex-wrap:wrap;
+            gap: 16px;
+        }
+    .card {
+        width: 400px;
+        height: 488px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        color: white;
+    }
+        .active{
+            background-color: green;
+        }
+        .inactive{
+            background-color: red;
+            color: black;
+        }
+        .content {
+            width: 1400px;
+        }
+    </style>
 </head>
 <body>
+<div class="container">
+    <div class="content">
+        <div class="cardList">
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
