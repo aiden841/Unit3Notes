@@ -25,8 +25,13 @@ if (e.target.matches('.cardList')){
 if (e.target.classList.contains('active')){
     e.target.classList.remove('active');
     e.target.classList.add('inactive');
+    return
     }
 e.target.remove();
+    let children = cardList.children;
+    if(children.length < 1){
+        clearInterval(interval);
+    }
 });
 
 buildBoard();
