@@ -1,5 +1,6 @@
 const cardList = document.querySelector('.cardList');
-
+const pointMaker  = document.querySelector('.pointMaker');
+let points = 0;
 buildBoard();
 
 let interval = setInterval(function(){
@@ -7,16 +8,23 @@ let interval = setInterval(function(){
 }, 2000);
 
 cardList.addEventListener('click', function(e) {
-    console.log(e.target);
+
     if (e.target.matches('.cardList')) {
         return
     }
     if (e.target.classList.contains('active')) {
         e.target.classList.remove('active');
         e.target.classList.add('inactive');
+        points++;
+        console.log(`points: ${points}`);
+        pointMaker.textContent=points;
         return
     }
     e.target.remove();
+    points++;
+    points++;
+    console.log(`points: ${points}`);
+    pointMaker.textContent=points;
     let children = cardList.children;
     if(children.length < 1){
         clearInterval(interval);
