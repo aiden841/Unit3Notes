@@ -5,7 +5,7 @@ buildBoard();
 
 let interval = setInterval(function(){
     addCard( cardList.children.length + 1)
-}, 2000);
+}, 5000);
 
 cardList.addEventListener('click', function(e) {
 
